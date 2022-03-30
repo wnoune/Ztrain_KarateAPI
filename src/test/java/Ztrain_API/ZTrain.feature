@@ -3,7 +3,7 @@ Feature: Ztrain API Automation
   Background:
     * url 'https://ztrain-shop.herokuapp.com'
     * header Accept = 'application/json'
-    * header Authorization = 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMGY1NjFhZTgyNmJjMGIxODMzMWE2ZSIsImlhdCI6MTY0ODEzMzg4MCwiZXhwIjoxNjQ4MjIwMjgwfQ.ylkbqCe7zefacqmJ6RsCItpRJnLFOrFmlVNCUfyMFjo'
+    * header Authorization = 'Bearer ' + authInfo.token
 
   Scenario Outline: Login user
     Given path '/auth/login'

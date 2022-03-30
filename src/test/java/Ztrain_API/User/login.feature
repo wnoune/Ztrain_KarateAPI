@@ -3,18 +3,17 @@ Feature: Login user
   Background:
     * url 'https://ztrain-shop.herokuapp.com'
     * path '/auth/login'
-  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMzlhZGNhZmJjNGMyMTE0ZmYwYWQ3NiIsImlhdCI6MTY0ODY0MjM5NiwiZXhwIjoxNjQ4NzI4Nzk2fQ.yQUdX1eTuORqSXyx3
+
 
   @TEST_OF-704
-  Scenario Outline: Test the compliance of the login api call status code with valid parameters
-    Given request {email:"<email>", password:"<password>"}
+  Scenario: Test the compliance of the login api call status code with valid parameters
+    Given request { email: "tester@test.com", password: "12345678"}
     When method POST
     And print response
     Then status 201
 
-    Examples:
-      |email           |password |
-      |tester@test.com |12345678 |
+    * def resp = response
+
 
   @TEST_OF-705
   Scenario Outline: Test request failure when HTTP headers are invalid
