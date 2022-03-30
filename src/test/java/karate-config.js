@@ -6,7 +6,7 @@ function fn() {
   }
   var config = {
     env: env,
-    myVarName: 'someValue'
+    base_url: 'https://ztrain-shop-web.herokuapp.com/auth/login'
   }
   if (env == 'dev') {
     // customize

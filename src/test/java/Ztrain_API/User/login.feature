@@ -3,6 +3,7 @@ Feature: Login user
   Background:
     * url 'https://ztrain-shop.herokuapp.com'
     * path '/auth/login'
+  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMzlhZGNhZmJjNGMyMTE0ZmYwYWQ3NiIsImlhdCI6MTY0ODY0MjM5NiwiZXhwIjoxNjQ4NzI4Nzk2fQ.yQUdX1eTuORqSXyx3
 
   @TEST_OF-704
   Scenario Outline: Test the compliance of the login api call status code with valid parameters
