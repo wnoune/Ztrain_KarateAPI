@@ -50,7 +50,7 @@ Feature: Ztrain API Automation
     Given path '/cart/update'
     And request {product:"<product>", user_id:"<user_id>", quantity:<qty>}
     When method PUT
-    Then status 200"
+    Then status 200
 
     Examples:
       |product                  |user_id                  |qty |
@@ -61,7 +61,7 @@ Feature: Ztrain API Automation
     And request {product:"<product>", user_id:"<user_id>", quantity:<qty>}
     When method DELETE
     And print response
-    Then status 200"
+    Then status 200
 
     Examples:
       |product                  |user_id                  |qty |

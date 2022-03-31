@@ -6,7 +6,7 @@ Feature: register user
     * def bodyRequest =
     """
     {
-      email: "#('karate1' + '@email.com')",
+      email: "#('admin' + '@test.com')",
       password: "12345678",
       adress: "Douala Bonamoussadi",
       age: 26

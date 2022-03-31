@@ -7,7 +7,7 @@ Feature: Login user
 
   @TEST_OF-704
   Scenario: Test the compliance of the login api call status code with valid parameters
-    Given request { email: "tester@test.com", password: "12345678"}
+    Given request { email: "admin@test.com", password: "12345678"}
     When method POST
     And print response
     Then status 201
@@ -18,7 +18,7 @@ Feature: Login user
   @TEST_OF-705
   Scenario Outline: Test request failure when HTTP headers are invalid
     Given request {email:"<email>", password:"<password>"}
-    And header content-type = 'application/xml'
+      And header content-type = 'application/xml'
     When method POST
     And print response
     Then status 400
