@@ -6,7 +6,7 @@ function fn() {
   }
   var config = {
     env: env,
-    base_url: 'https://ztrain-shop-web.herokuapp.com/auth/login',
+    base_url: 'https://ztrain-shop.herokuapp.com',
     product: '624463744db47f10408d5d67'
   }
   var result = karate.callSingle('classpath:Ztrain_API/User/login.feature@TEST_OF-704', config);

@@ -67,7 +67,7 @@ Feature: Ztrain API Automation
       |product                  |user_id                  |qty |
       |6239d9865484ea8439e99f8e |6239adcafbc4c2114ff0ad76 |8   |
 
-  Scenario Outline: Get all product user to cart
+  Scenario : Get all product user to cart
     Given path '/cart/:user_id'
     And request {}
     When method GET

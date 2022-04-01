@@ -29,7 +29,7 @@ Feature: Add comments to products
     Examples:
         |token                  |userID   |number         |exp_month  |exp_year |cvc |
         |authInfo.token + 'NTW' |         |42424242424242 |1          |2023     |314 |
-        |authInfo.token         |authuser |42424242424242 |1          |2023     |314 |
+        |authInfo.token         |azerty   |42424242424242 |1          |2023     |314 |
         |authInfo.token         |         |42424242424242 |1          |2023     |314 |
         |authInfo.token         |         |42424242       |1          |2023     |314 |
         |authInfo.token         |         |42424242424242 |-1         |2023     |314 |
