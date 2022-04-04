@@ -1,7 +1,7 @@
 Feature: Add product to card
 
   Background:
-    * url 'https://ztrain-shop.herokuapp.com'
+    * url base_url
     * path '/cart/add'
 
 
