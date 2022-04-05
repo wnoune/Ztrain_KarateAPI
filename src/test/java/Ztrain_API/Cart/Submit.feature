@@ -1,9 +1,9 @@
-Feature: Add comments to products
+Feature: Submit cart
 
   Background:
     * url 'https://ztrain-shop.herokuapp.com'
     * path '/command/create'
-    * def result = call read('classpath:Ztrain_API/Product/addCart.feature@TEST_OF-728')
+    * def result = call read('classpath:Ztrain_API/Cart/addCart.feature@TEST_OF-728')
 
   @TEST_OF-734
   Scenario Outline: Test the submit command api call with invalid parameters

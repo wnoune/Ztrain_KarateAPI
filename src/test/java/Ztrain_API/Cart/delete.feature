@@ -29,3 +29,16 @@ Feature: Delete products to cart
       |authInfo.token         |              |product    |cannot delete product |
 
 
+  @TEST_OF-766
+  Scenario Outline: Test the delete all product user to cart api
+    * def result = call read('classpath:Ztrain_API/cart/addCart.feature@TEST_OF-728')
+    Given path <user_id>
+    And header Authorization = 'Bearer ' + <token>
+    When  method DELETE
+    Then status 200
+    And print response
+
+    Examples:
+      |token                  |user_id                |
+      |authInfo.token         |authInfo.user          |
+
