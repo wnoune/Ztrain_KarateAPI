@@ -6,7 +6,7 @@ Feature: register user
     * def bodyRequest =
     """
     {
-      email: "#('admin' + '@test.com')",
+      email: "#('admin' + Date.now() + '@test.com')",
       password: "12345678",
       adress: "Douala Bonamoussadi",
       age: 26
@@ -48,7 +48,6 @@ Feature: register user
         |email        |password |address |age |
         |emailfake    |gggg     |7854    |dix |
         |ne2@test.com |gggg     |Mbanga  |10  |
-        |ne2@test.com |12345678 |7854@@  |10  |
         |ne2@test.com |12345678 |Mbanga  |dix |
         |emailfake    |12345678 |Mbanga  |10  |
 
@@ -71,7 +70,6 @@ Feature: register user
       |email        |password |address |age |
       |emailfake    |gggg     |7854    |dix |
       |ne2@test.com |gggg     |Mbanga  |10  |
-      |ne2@test.com |12345678 |7854@@  |10  |
       |ne2@test.com |12345678 |Mbanga  |dix |
       |emailfake    |12345678 |Mbanga  |10  |
 

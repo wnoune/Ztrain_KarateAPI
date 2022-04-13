@@ -19,14 +19,14 @@ Feature: Delete products to cart
     Given header Authorization = 'Bearer ' + <token>
     And request { product_id: '#(product+ "<product_id>" )', user_id: '#(authInfo.user+ "<user_id>")' }
     When method DELETE
-    Then match response.message == '<errorMessage>'
+    Then match response == { statusCode: '#present', message: '#present', error: #present }
     And print response
 
     Examples:
-      |token                  |user_id       |product_id |errorMessage          |
-      |authInfo.token + 'NTW' |              |           |Unauthorized          |
-      |authInfo.token         |KEMS          |           |cannot delete product |
-      |authInfo.token         |              |product    |cannot delete product |
+      |token                  |user_id       |product_id |
+      |authInfo.token + 'NTW' |              |           |
+      |authInfo.token         |KEMS          |           |
+      |authInfo.token         |              |product    |
 
 
   @TEST_OF-766
