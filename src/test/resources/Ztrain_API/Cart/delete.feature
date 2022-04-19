@@ -1,12 +1,12 @@
 Feature: Delete products to cart
   
   Background: 
-    * url base_url
+    * url 'https://ztrain-shop.herokuapp.com'
     * path '/cart/delete'
 
   @TEST_OF-753
   Scenario: Test the api call delete specific product to cart with valid parameters
-    * def result = call read('classpath:Ztrain_API/cart/addCart.feature@TEST_OF-728')
+    * def result = call read('classpath:Ztrain_API/Cart/addCart.feature@TEST_OF-728')
     Given header Authorization = 'Bearer ' + authInfo.token
     And request { product: '#(product)', user_id: '#(authInfo.user)' }
     When  method DELETE
@@ -31,7 +31,7 @@ Feature: Delete products to cart
 
   @TEST_OF-766
   Scenario Outline: Test the delete all product user to cart api
-    * def result = call read('classpath:Ztrain_API/cart/addCart.feature@TEST_OF-728')
+    * def result = call read('classpath:Ztrain_API/Cart/addCart.feature@TEST_OF-728')
     Given path <user_id>
     And header Authorization = 'Bearer ' + <token>
     When  method DELETE
@@ -39,6 +39,6 @@ Feature: Delete products to cart
     And print response
 
     Examples:
-      |token                  |user_id                |
-      |authInfo.token         |authInfo.user          |
+      |token                  |user_id       |
+      |authInfo.token         |authInfo.user |
 

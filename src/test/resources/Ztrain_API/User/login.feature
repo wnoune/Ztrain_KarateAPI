@@ -30,7 +30,7 @@ Feature: Login user
   @TEST_OF-706
   Scenario Outline: Test login api call with invalid required request body
     Given request {email:"<email>", password:"<password>"}
-    And header content-type = 'application/JSON'
+    And header content-type = 'application/xml'
     When method POST
     And print response
     Then assert responseStatus == 400 || responseStatus == 401
